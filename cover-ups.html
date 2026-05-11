@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Elite Ink</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Specific Gallery Styling */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+            padding: 2rem 5%;
+        }
+        .gallery-item {
+            aspect-ratio: 1 / 1;
+            background: #1a1a1a;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        .back-nav {
+            padding: 100px 5% 20px;
+        }
+        .back-link {
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">ELITE<span>INK</span></div>
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </nav>
+
+    <div class="back-nav">
+        <h1>Portraits <span style="color: var(--teal);">Gallery</span></h1>
+        <p>A collection of our hyper-realistic portrait work.</p>
+    </div>
+
+    <section class="gallery-grid">
+        <!-- Repeat this block for as many photos as you have -->
+        <div class="gallery-item"><img src="photo1.jpg" alt="Tattoo 1"></div>
+        <div class="gallery-item"><img src="photo2.jpg" alt="Tattoo 2"></div>
+        <div class="gallery-item"><img src="photo3.jpg" alt="Tattoo 3"></div>
+        <div class="gallery-item"><img src="photo4.jpg" alt="Tattoo 4"></div>
+        <div class="gallery-item"><img src="photo5.jpg" alt="Tattoo 5"></div>
+        <div class="gallery-item"><img src="photo6.jpg" alt="Tattoo 6"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Dumb Dog LLC | <a href="index.html" style="color: var(--teal);">Home</a></p>
+    </footer>
+
+</body>
+</html>

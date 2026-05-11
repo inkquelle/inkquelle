@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Elite Ink</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-container {
+            padding: 120px 5% 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .about-flex {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        /* 4-Photo Collage Grid */
+        .about-photos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .about-photos img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border: 1px solid var(--teal);
+        }
+        .about-text {
+            line-height: 1.8;
+        }
+        .about-text h2 {
+            color: var(--teal);
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        /* Desktop Adjustments */
+        @media (min-width: 1024px) {
+            .about-flex {
+                flex-direction: row;
+                align-items: center;
+            }
+            .about-photos {
+                flex: 1;
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .about-photos img {
+                height: 300px;
+            }
+            .about-text {
+                flex: 1;
+                padding-left: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">ELITE<span>INK</span></div>
+        <a href="index.html" style="color: var(--teal); text-decoration: none;">Back to Home</a>
+    </nav>
+
+    <section class="about-container">
+        <div class="about-flex">
+            <!-- 4 Main Photos -->
+            <div class="about-photos">
+                <img src="studio1.jpg" alt="Studio Interior">
+                <img src="artist1.jpg" alt="Artist at Work">
+                <img src="detail1.jpg" alt="Tattoo Detail">
+                <img src="studio2.jpg" alt="Consultation Area">
+            </div>
+
+            <!-- About Text -->
+            <div class="about-text">
+                <h2>Our Story</h2>
+                <p>Founded on the principles of precision and creative integrity, Elite Ink is more than just a tattoo shop—it's a sanctuary for art. Our studio was designed to provide a sleek, modern environment that prioritizes client comfort and hospital-grade sterility.</p>
+                <br>
+                <p>Specializing in high-end realism and intricate portraits, our artists work closely with every client to ensure their vision is translated perfectly onto the skin. Whether you are looking for a complete cover-up or a fresh original piece, we treat every session as a collaborative masterpiece.</p>
+                <br>
+                <a href="index.html#contact" class="btn">Book Your Session</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Dumb Dog LLC. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
