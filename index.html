@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Ink | Tattoo & Art Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">ELITE<span>INK</span></div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#specialties" onclick="toggleMenu()">Gallery</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Artistry That Lasts <span>A Lifetime</span></h1>
+            <p>Premium custom tattooing in a modern, sterile environment.</p>
+            <a href="#contact" class="btn">Book a Consultation</a>
+        </div>
+    </header>
+
+    <!-- Specialties / Project Details -->
+    <section id="specialties" class="details-section">
+        <h2 class="section-title">Our Specialties</h2>
+        
+        <div class="detail-grid">
+            <!-- Portraits -->
+            <div class="detail-card">
+                <div class="card-img portrait-bg"></div>
+                <div class="card-text">
+                    <h3>Portraits</h3>
+                    <p>Capturing the essence of your loved ones with hyper-realistic precision and detail.</p>
+                </div>
+            </div>
+
+            <!-- Realism -->
+            <div class="detail-card">
+                <div class="card-img realism-bg"></div>
+                <div class="card-text">
+                    <h3>Realism</h3>
+                    <p>3D-depth and lifelike textures that blur the line between skin and canvas.</p>
+                </div>
+            </div>
+
+            <!-- Cover Ups -->
+            <div class="detail-card">
+                <div class="card-img coverup-bg"></div>
+                <div class="card-text">
+                    <h3>Cover Ups</h3>
+                    <p>Transform old ink into a new masterpiece with expert layering and color theory.</p>
+                </div>
+            </div>
+
+            <!-- Reworks -->
+            <div class="detail-card">
+                <div class="card-img rework-bg"></div>
+                <div class="card-text">
+                    <h3>Reworks</h3>
+                    <p>Breathe new life into faded or aging tattoos with fresh saturation and sharper lines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact-section">
+        <h2>Get In Touch</h2>
+        <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="_replyto" placeholder="Your Email" required>
+            <select name="service">
+                <option value="portrait">Portrait</option>
+                <option value="realism">Realism</option>
+                <option value="coverup">Cover Up / Rework</option>
+                <option value="other">Other</option>
+            </select>
+            <textarea name="message" placeholder="Describe your idea..." rows="5" required></textarea>
+            <button type="submit" class="btn">Send Request</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Dumb Dog LLC. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('nav-links');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
